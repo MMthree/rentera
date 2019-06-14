@@ -4,7 +4,7 @@ import AutoComplete from "../AutoComplete/AutoComplete";
 
 class AddBill extends Component {
     componentDidMount() {
-        console.log(this.props.state.roles);
+        //console.log(this.props.state.roles);
     }
 
     state = {
@@ -16,7 +16,7 @@ class AddBill extends Component {
 
     addSelected = event => {
         event.preventDefault();
-        console.log(event.target.id);
+        //console.log(event.target.id);
         let arr = [];
         let oldTenants = this.state.tenants;
         oldTenants.forEach(tenant => {
@@ -27,38 +27,38 @@ class AddBill extends Component {
             tenants: arr
         });
         this.props.state.tenants.push(event.target.id);
-        console.log(this.props.state);
+        //console.log(this.props.state);
 
 
 
     }
     removeTenant = event => {
-        console.log(event.target.id.split("-")[1])
+        //console.log(event.target.id.split("-")[1])
         let removed = this.state.tenants.filter((tenant, i) => {
             return tenant !== event.target.id.split("-")[1]
         });
-        console.log(`REMOVED: ${removed}`);
+        //console.log(`REMOVED: ${removed}`);
         this.setState({
             tenants: removed
         })
         this.props.state.tenants = removed;
 
-        console.log(this.props.state.tenants);
+        //console.log(this.props.state.tenants);
     }
     
     removeFeeRow = event => {
         event.preventDefault();
-        console.log(event.target)
+       // console.log(event.target)
         let removed = this.state.repairFees.filter((newFee, i) => {
             return newFee.name !== event.target.id.split("-")[1]
         });
-        console.log(`REMOVED: ${removed}`);
+        //console.log(`REMOVED: ${removed}`);
         this.setState({
             repairFees: removed
         })
         this.props.state.repairFees = removed;
 
-        console.log(this.props.state.repairFees);
+        //console.log(this.props.state.repairFees);
     }
 
     addFeeRow = event => {
@@ -68,15 +68,15 @@ class AddBill extends Component {
             name: this.props.state.repair,
             amount: this.props.state.repairFee
         };
-        console.log(newFee);
-        console.log(this.props.state.repairFees)
+        //console.log(newFee);
+        //console.log(this.props.state.repairFees)
         // this.props.state.repairFees.push(newFee);
         const arr = this.state.repairFees;
         arr.push(newFee);
         this.setState({
             repairFees: arr
         })
-        console.log(this.props.state.repairFees);
+        //console.log(this.props.state.repairFees);
 
     }
 
@@ -91,7 +91,7 @@ class AddBill extends Component {
                 this.setState({
                     allTenants: arr
                 })
-                console.log(this.state.allTenants);
+                //console.log(this.state.allTenants);
             })
             .catch(err => console.log(err));
     }

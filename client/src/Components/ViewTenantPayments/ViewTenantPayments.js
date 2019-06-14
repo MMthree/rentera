@@ -17,15 +17,15 @@ class ViewTenantPayments extends Component {
         } 
         else {
 
-        console.log(this.props.state)
+        // console.log(this.props.state)
 
         return (
-            <div className="col-12 universalCard">
-            <div className="universalCard card shadow">
+            <div className="col-12 universal_card shadow">
+            <div className="">
             <div className="card-title">
             <h5>Manage Payments -for tenants</h5>
             </div>
-            <div className="card-body universal_card">
+            <div className="card-body">
             <div className="row">
 
             <div className="col-4">Due Date</div>

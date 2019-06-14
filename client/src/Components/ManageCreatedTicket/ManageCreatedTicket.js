@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 class ManageCreatedTicket extends Component {
     render() {
-        console.log(this.props.state);
+        //console.log(this.props.state);
         return (
 
             <div className="col col-md-8 mx-auto universalCard shadow">

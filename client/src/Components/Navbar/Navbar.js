@@ -8,7 +8,7 @@ class Navbar extends Component {
         checked: ""
     }
     loggedIn = (toggled) => {
-        console.log(toggled);
+        // console.log(toggled);
         if (this.props.state.roles.length < 1) {
             return (
                 <nav className="navigation__nav">
@@ -28,7 +28,7 @@ class Navbar extends Component {
                         <li className="navigation__item"><a href="/manageTickets"className="navigation__link"><span>02</span> Tickets</a></li>
                         <li className="navigation__item"><a href="/manageProperties"className="navigation__link"><span>03</span> Properties</a></li>
                         <li className="navigation__item"><a href="/manageLeases"className="navigation__link"><span>04</span> Leases</a></li>
-                        <li className="navigation__item"><a href="/signout" onClick={this.props.signOut} className="navigation__link"><span>05</span> Sign Out</a></li>  
+                        <li className="navigation__item"><a href="/" onClick={this.props.signOut} className="navigation__link"><span>05</span> Sign Out</a></li>  
                     </ul>
    
 

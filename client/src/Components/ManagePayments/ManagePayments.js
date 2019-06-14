@@ -4,11 +4,15 @@ import ViewTenantPayments from "../ViewTenantPayments/ViewTenantPayments";
 import "./ManagePayments.css";
 
 class ManagePayments extends Component {
+    componentDidMount() {
+        // console.log(this.props.state)
+    }
+    
     render() {
         return (
 <div>
             <div className="row">
-                    <div className="col col-md-8 mx-auto shadow managePayments_card">
+                    <div className="col col-md-8 mx-auto shadow universalCard">
                        
                         <ViewTenantPayments
                         state={this.props.state}

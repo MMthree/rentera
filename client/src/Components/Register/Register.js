@@ -117,6 +117,9 @@ class Register extends Component {
                             name="register" 
                             onClick={this.props.handleFormSubmit} 
                             className="btn register_btn">Submit</button>
+                            <div className="mt-3">
+                        <p>Have an account? <strong><a href="/signin">Log in</a></strong></p>
+                     </div>
                 </div>
                 </div>
             );

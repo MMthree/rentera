@@ -61,8 +61,12 @@ class SignIn extends Component {
                             onClick={this.props.handleFormSubmit} 
                             type="submit" 
                             className="btn universal_btn">Submit</button>
-                
+                    
+                    <div className="mt-3">
+                        <p>Dont' have an account? <strong><a href="/register">Sign up</a></strong></p>
+                     </div>
                 </form>
+
                 
                 </div>
 

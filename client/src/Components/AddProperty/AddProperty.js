@@ -13,7 +13,7 @@ class AddProperty extends Component {
 
     addSelected = event => {
         event.preventDefault();
-        console.log(event.target.id);
+        // console.log(event.target.id);
         let arr = [];
         let oldManagers = this.props.state.managers;
         oldManagers.forEach(manager => {
@@ -25,21 +25,21 @@ class AddProperty extends Component {
             managers: arr
         });
         this.props.state.managers.push(event.target.id);
-        console.log(this.props.state);
+        // console.log(this.props.state);
 
     }
     removeManager = event => {
-        console.log(event.target.id.split("-")[1])
+        // console.log(event.target.id.split("-")[1])
         let removed = this.props.state.managers.filter((manager, i) => {
             return manager !== event.target.id.split("-")[1];
         });
-        console.log(`REMOVED: ${removed}`);
+        // console.log(`REMOVED: ${removed}`);
         this.setState({
             managers: removed
         })
         this.props.state.managers = removed;
 
-        console.log(this.props.state.managers);
+        // console.log(this.props.state.managers);
     }
     componentDidMount() {
         API.getManagers()
@@ -53,7 +53,7 @@ class AddProperty extends Component {
                 this.setState({
                     allManagers: arr
                 })
-                console.log(this.state.allManagers);
+                // console.log(this.state.allManagers);
             })
             .catch(err => console.log(err));
 
@@ -61,7 +61,7 @@ class AddProperty extends Component {
     }
     onClick1 = event => {
         event.preventDefault();
-        console.log(this.state.showResults)
+        // console.log(this.state.showResults)
 
         this.setState({
             showResults: true

@@ -13,17 +13,17 @@ class ViewManagedLeases extends Component {
 
     setViewProperty = event => {
         const propertyEnum = event.target.id.split("-")[1];
-        console.log(propertyEnum);
-        console.log(this.props.state.managedLeases[propertyEnum]);
+        //console.log(propertyEnum);
+        //console.log(this.props.state.managedLeases[propertyEnum]);
         this.props.state.currentViewManagedLease = this.props.state.managedLeases[propertyEnum];
         this.props.state.managedLeaseRedirect = true;
         this.setState({
             redirect: true
         })
-        console.log(this.info);
+        //console.log(this.info);
     }
     render(){
-        console.log(this.props.state);
+        //console.log(this.props.state);
 
         if(this.state.redirect === true){
             return <Redirect to={{ pathname: "/manageLeaseManager", info: this.props.state.currentViewManagedLease }} />
@@ -42,12 +42,12 @@ class ViewManagedLeases extends Component {
                 <div className="card-body">
                 <ul className="list-group">
                 {this.props.state.managedLeases.map((lease, i) => {
-                    console.log(lease._id)
+                    //console.log(lease._id)
                     let address;
                             this.props.state.managedProperties.forEach((property,i)=>{
                                 address = property.address
                             })
-                            console.log(address);
+                           // console.log(address);
                             return (<li key={i}
                                 className="list-group-item rounded-0"
                             >
